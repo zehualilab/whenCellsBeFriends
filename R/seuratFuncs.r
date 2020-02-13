@@ -104,7 +104,7 @@ ExtractField <- function (string, field = 1, delim = "_")
 
 makeSeuratList<-function(data.dirs=NULL,min.cells=3,min.features=200){
 return(lapply(data.dirs, function(x) {
-    dd<-unlist(strsplit(x,"\\/")
+    dd<-unlist(strsplit(x,"\\/"))
     pnam<-dd[grep('outs',dd)-1]
 rd <- Read10X(x)
 # rd<-rd[grepl("hg19",rownames(rd)),]
